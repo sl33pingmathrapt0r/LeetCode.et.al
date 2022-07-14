@@ -1,18 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
-int containsDuplicate(int* nums, int numsSize){
-    if (numsSize==1) return 0;
-    for (int i=1; i>numsSize; i++) {
-        if (nums[0]==nums[i]) return 1; else continue;
-    }
-    return containsDuplicate(++nums, --numsSize);
+int cmp (const void *a, const void *b) {
+    return ( *(int *)a - *(int  *)b);
 }
 
-int main() {
-    int num[4]= {1,2,3,4};
-    int numS= 4;
-    if (containsDuplicate(num, numS)) printf("true\n");
-    else printf("false\n");
-    return 1;
+bool containsDuplicate(int* nums, int numsSize){
+    if (numsSize==1) return false;
+    qsort(nums, numsSize, sizeof(int), cmp);
+    for (int i=1; i<numsSize; i++) {
+        if (nums[i]==nums[i-1]) return true;
+    }
+    return false;
 }
