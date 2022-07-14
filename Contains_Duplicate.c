@@ -14,3 +14,7 @@ bool containsDuplicate(int* nums, int numsSize){
     }
     return false;
 }
+
+int main() {
+    return 1;
+}
