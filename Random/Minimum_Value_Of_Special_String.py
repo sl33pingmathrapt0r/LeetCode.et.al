@@ -82,7 +82,7 @@ d2t= lambda n: ''.join([n2w[c] for c in str(n)])
 test= [d2t(case) for case in cases]
 for string in test:
     store={}
-    # count the number oof
+    # count the number of occurences of each character
     for c in string: store[c]= store.get(c,0)+1
     print(minVal(countDigits(store)))
     
