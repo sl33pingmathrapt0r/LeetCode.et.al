@@ -45,7 +45,9 @@ def countDigits(letterCount):
     for i in range(len(signature)):
         if letterCount.get(signature[i]):
             rep= letterCount.get(signature[i])
+            # update the number of times the digit was used
             count[str(sign_digit[i])]= rep
+            # update the count of letters still unaccounted for
             for x in n2w[str(sign_digit[i])]: letterCount[x]-= rep
     
     return count
@@ -60,6 +62,7 @@ def minVal(digitCount):
     """
     s= ''
     for i in range(1,10):
+        # find smallest non-zero leading digit
         if digitCount.get(str(i),0):
             digitCount[str(i)]-= 1
             s+= str(i)
@@ -67,7 +70,7 @@ def minVal(digitCount):
     for i in range(10):
         s+= str(i) * digitCount.get(str(i), 0)
     
-    return s
+    return int(s)
 
 
 # TESTING
