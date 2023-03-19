@@ -46,9 +46,9 @@ def StringReduction(strParam):
 
 def changes(x):
   """
-  Takes in a tuple (set) of 2 characters 
+  Takes in a collection of 2 characters 
   as input. Returns the character not in
-  the set. 
+  the collection. 
   """
   if 'a' not in x: return 'a'
   if 'b' not in x: return 'b'
