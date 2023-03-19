@@ -32,7 +32,7 @@ always contain at least 1 element.
 # left and right bounds, but the min height between the 
 # 2 ends. 
 
-def HistogramArea(arr):
+def HistogramArea(arr: list):
 
   # code goes here
   # recursion

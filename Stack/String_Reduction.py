@@ -44,11 +44,11 @@ def StringReduction(strParam):
   return len(stack)
   
 
-def changes(x):
+def changes(x: tuple):
   """
-  Takes in a collection of 2 characters 
-  as input. Returns the character not in
-  the collection. 
+  Takes in a tuple of 2 characters 
+  as input. Returns the character 
+  not in the tuple. 
   """
   if 'a' not in x: return 'a'
   if 'b' not in x: return 'b'
