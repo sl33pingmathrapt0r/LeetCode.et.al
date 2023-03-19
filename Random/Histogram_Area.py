@@ -22,6 +22,9 @@ to 6 because the entire width is 2 and the
 maximum height is 3, therefore 2 * 3 = 6. 
 Your program should return 6. The array will
 always contain at least 1 element.
+
+[6, 3, 1, 4, 12, 4] --> 12
+[5, 6, 7, 4, 1] --> 16
 """
 
 # 2-pointer method for most-water-container won't work, 
