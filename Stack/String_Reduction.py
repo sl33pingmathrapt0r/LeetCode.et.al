@@ -26,7 +26,7 @@ abcabc --> 2
 cccc --> 4
 """
 
-def StringReduction(strParam):
+def StringReduction(strParam: str) -> int:
 
   # code goes here
   if len(strParam)==0: return 0
@@ -44,7 +44,7 @@ def StringReduction(strParam):
   return len(stack)
   
 
-def changes(x: tuple):
+def changes(x: tuple) -> str:
   """
   Takes in a tuple of 2 characters 
   as input. Returns the character 
