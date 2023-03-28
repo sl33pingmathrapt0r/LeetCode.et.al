@@ -30,6 +30,7 @@ class Solution:
         #     a, b = (a ^ b) & mask, ((a & b) << 1) & mask
         
         # return a if a <= 0x7FFFFFFF else ~(a ^ mask)
+        # ~(a ^ mask) is the same as (~a)-mask
         
         # 2. Put the numbers in power to exploit multiplication
         # if not a: return b
