@@ -11,6 +11,14 @@ Array.prototype.groupBy = function(fn) {
         else grouped[key]= [x];
     }
     return grouped;    
+
+    // OR
+    // return this.reduce((res, item)=> {
+    //     const key= fn(item);
+    //     if (key in res) res[key].push(item);
+    //     else  res[key]=[item];
+    //     return res;
+    // }, {});
 };
 
 /**
