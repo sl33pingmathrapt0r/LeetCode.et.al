@@ -21,6 +21,7 @@ var compose = function(functions) {
                 return nextFn(prevFn(x));
                 };
             });
+	*/
     }
 };
 
