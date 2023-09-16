@@ -20,7 +20,7 @@ class Heap:
         """
         assert hasattr(comparator, '__call__'), "provide a function"
         assert len(arg(comparator).args)==2, "function must take 2 arguments"
-        self.comparator= comparator
+        self.__comparator= comparator
         self.__heap= []
 
     def __repr__(self) -> str:
@@ -108,16 +108,16 @@ class Heap:
 
         # only 1 child node
         elif 2*index+2 >= len(self.__heap):
-            if self.comparator(self[2*index+1], self[index]):
+            if self.__comparator(self[2*index+1], self[index]):
                 self[index], self[2*index+1]= \
                     self[2*index+1], self[index]
 
         # 2 child nodes
-        elif self.comparator(self[2*index+1], self[index]) or \
-            self.comparator(self[2*index+2], self[index]):
+        elif self.__comparator(self[2*index+1], self[index]) or \
+            self.__comparator(self[2*index+2], self[index]):
 
             larger= 2*index+1 \
-                if self.comparator(self[2*index+1], self[2*index+2]) \
+                if self.__comparator(self[2*index+1], self[2*index+2]) \
                 else 2*index+2
             self[index], self[larger]= self[larger], self[index]
             return self.fix_heap(larger)
