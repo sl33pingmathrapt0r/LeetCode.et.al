@@ -54,14 +54,17 @@ class Heap:
         """
         return self.__heap.__setitem__(index, value)
 
-    def set_heap(self, elements: List):
+    def heapify(self, elements: List):
         """
         Assign the heap with a given
         list of elements.
         """
         assert isinstance(elements, list), "provide a list"
-        for elem in elements:
-            self.insert(elem)
+        self.__heap= elements
+        length= len(self)
+        last_parent= length//2 -1
+        for parent_node in range(last_parent, -1, -1):
+            self.fix_heap(parent_node)
 
     def get_heap(self) -> List:
         """
