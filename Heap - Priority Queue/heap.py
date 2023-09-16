@@ -5,6 +5,7 @@ Instantiate to use methods.
 
 from typing import List, Callable
 from inspect import getfullargspec as arg
+from math import log, floor
 
 class Heap:
     """
@@ -84,6 +85,13 @@ class Heap:
         """
         assert element in self.__heap, "element not in heap"
         return self.__heap.index(element)
+
+    def height(self) -> int:
+        """
+        Return height of binary heap tree.
+        """
+        if not len(self): return 0
+        return floor(log(len(self), 2)) + 1
 
     def fix_heap(self, index: int):
         """
