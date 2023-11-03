@@ -1,4 +1,5 @@
 # NeetCode.io and others
+A collection of DSA or DB question solutions. The default language used is Python unless specified otherwise.
 
 ### [In Progress]
 - Blind 75
